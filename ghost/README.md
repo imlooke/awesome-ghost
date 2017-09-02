@@ -9,9 +9,9 @@ Ghost博客Dockerfile。生成镜像大小仅仅98.98mb。😁
 ## 1. 环境变量
 - GHOST_VERSION *环境变量*
 - NODE_ENV *production or development*
-- https://github.com/TryGhost/Ghost/releases
+- [下载地址](https://github.com/TryGhost/Ghost/releases)
 
 ## 2. config.json
 - config.production.json
 - config.development.json
-- 所有的配置项都在此处设置，详看https://docs.ghost.org/docs/config
+- 所有的配置项都在此处设置，详看[ghost config](https://docs.ghost.org/docs/config)
