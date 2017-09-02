@@ -1,0 +1,35 @@
+version: '2'
+services:
+  nginx:
+    image: nginx
+    build: nginx
+    command: nginx -g 'daemon off;'
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    container_name: nginx
+    links:
+      - ghost
+  mysql:
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=your_mysql_password
+      - MYSQL_DATABASE=ghost
+  ghost:
+    image: ghost
+    build: ghost
+    depends_on: 
+      - mysql
+    restart: always
+    ports:
+      - "2368:2368"
+    container_name: ghost
+    links:
+      - mysql
+    environment:
+      - NODE_ENV:production

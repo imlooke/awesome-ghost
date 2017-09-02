@@ -1,0 +1,30 @@
+{
+    "url": "https://your-blog.site",
+    "server": {
+        "host": "0.0.0.0",
+        "port": 2368
+    },
+    "paths": {
+        "contentPath": "/ghost/content"
+    },
+    "database": {
+        "client": "mysql",
+        "connection": {
+            "host": "mysql",
+            "user": "your_mysql_user",
+            "password": "your_mysql_password",
+            "database": "your_mysql_database"
+        }
+    },
+    "mail": {
+        "transport": "SMTP",
+        "options": {
+            "host": "smtp_host",
+            "port": 25,
+            "auth": {
+                "user": "your_email",
+                "pass": "your_email_pass"
+            }
+        }
+    }
+}
